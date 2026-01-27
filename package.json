@@ -1,0 +1,21 @@
+{
+  "name": "my-static-site",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "setup": "node scripts/setup.js",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "typescript": "~5.7.2",
+    "vite": "^6.2.0"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.0.16",
+    "tailwindcss": "^4.0.16",
+    "whisper-transcript-sticky": "^0.1.0"
+  }
+}
