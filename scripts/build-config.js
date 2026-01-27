@@ -25,6 +25,9 @@ const DEFAULTS = {
 function loadConfig() {
   const configPath = path.join(rootDir, 'config.yml');
 
+  console.log(`Looking for config at: ${configPath}`);
+  console.log(`Config file exists: ${fs.existsSync(configPath)}`);
+
   let config = {
     site: { ...DEFAULTS.site },
     build: { ...DEFAULTS.build }
@@ -33,6 +36,7 @@ function loadConfig() {
   if (fs.existsSync(configPath)) {
     try {
       const yamlContent = fs.readFileSync(configPath, 'utf8');
+      console.log(`Config file contents:\n${yamlContent}`);
       const parsed = parseYaml(yamlContent);
 
       // Deep merge with defaults
@@ -42,6 +46,7 @@ function loadConfig() {
       if (parsed?.build) {
         config.build = { ...DEFAULTS.build, ...parsed.build };
       }
+      console.log('Successfully loaded config.yml');
     } catch (error) {
       console.error('Error parsing config.yml:', error.message);
       console.log('Using default configuration');
