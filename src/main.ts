@@ -66,6 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (controlsContainer) {
         const label = document.createElement("label");
         label.className = "block text-white text-sm font-medium mb-2";
+        label.htmlFor = "audio-dropdown";
         label.textContent = "Select Audio File:";
 
         controlsContainer.appendChild(label);
