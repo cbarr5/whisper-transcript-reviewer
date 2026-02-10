@@ -180,7 +180,7 @@ body {
   justify-content: space-between;
   gap: 1rem;
   padding: 0.5rem 1rem;
-  background: #1a1a2e;
+  background: oklch(var(--b2));
   border-radius: 6px;
   margin-top: 0.5rem;
   min-height: 50px;
@@ -196,12 +196,12 @@ body {
 
 .timeline-right {
   flex: 0 0 auto;
-  border-left: 1px solid #333;
+  border-left: 1px solid oklch(var(--b3));
   padding-left: 1rem;
 }
 
 .timeline-label {
-  color: #888;
+  color: oklch(var(--bc) / 0.5);
   font-size: 0.8rem;
   white-space: nowrap;
 }
@@ -218,7 +218,7 @@ body {
 }
 
 .timeline-word {
-  color: #666;
+  color: oklch(var(--bc) / 0.4);
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
   transition: all 0.2s ease;
@@ -226,23 +226,23 @@ body {
 }
 
 .timeline-word.placeholder {
-  color: #555;
+  color: oklch(var(--bc) / 0.35);
   font-style: italic;
 }
 
 .timeline-word.before,
 .timeline-word.after {
-  color: #888;
+  color: oklch(var(--bc) / 0.5);
   font-size: 0.9rem;
 }
 
 .timeline-word.current {
-  color: #fff;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: oklch(var(--pc));
+  background: linear-gradient(135deg, oklch(var(--p)), oklch(var(--s)));
   font-weight: bold;
   font-size: 1rem;
   padding: 0.25rem 0.75rem;
-  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+  box-shadow: 0 2px 8px oklch(var(--p) / 0.3);
 }
 
 .current-word-score {
@@ -250,29 +250,33 @@ body {
   align-items: center;
   gap: 0.5rem;
   padding: 0.25rem 0.75rem;
-  background: #2d2d44;
+  background: oklch(var(--b3));
   border-radius: 6px;
   min-width: 100px;
 }
 
 .score-label {
-  color: #888;
+  color: oklch(var(--bc) / 0.5);
   font-size: 0.7rem;
   text-transform: uppercase;
 }
 
 .score-display {
-  color: #4ade80;
+  color: oklch(var(--su));
   font-size: 1rem;
   font-weight: bold;
 }
 
 .score-display.mediocre {
-  color: #facc15;
+  color: oklch(var(--wa));
 }
 
 .score-display.poor {
-  color: #fb923c;
+  color: oklch(var(--er));
+}
+
+.score-display.terrible {
+  color: oklch(var(--er));
 }
 
 
